@@ -2,6 +2,7 @@ import { DATA } from "@/data/resume";
 import { Icons } from "@/components/icons";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 
 interface ProjectPageProps {
@@ -68,9 +69,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         
         {/* @ts-ignore - TypeScript inference issue after null check */}
         {project.image && !project.video && (
-          <img
+          <Image
             src={project.image}
             alt={project.title}
+            width={800}
+            height={400}
             className="w-full rounded-lg mb-8"
           />
         )}
