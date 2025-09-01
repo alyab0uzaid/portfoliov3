@@ -24,7 +24,7 @@ const getIcon = (iconName: string) => {
 // AvidBeam Case Study Component
 const AvidBeamCaseStudy = () => {
   return (
-    <div className="prose dark:prose-invert max-w-none">
+    <div className="prose dark:prose-invert prose-lg max-w-none">
       {/* Project Overview */}
       <div className="mb-12">
         <p className="text-lg mb-6">
@@ -36,7 +36,8 @@ const AvidBeamCaseStudy = () => {
 
       {/* Component 1 - Roles & Permissions */}
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-8 border-b pb-2">Component 1 – Roles & Permissions Management</h2>
+        <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">Component 1 – Roles & Permissions Management</h2>
         
         {/* Problem Section */}
         <div className="mb-12">
@@ -142,6 +143,131 @@ const AvidBeamCaseStudy = () => {
             </li>
           </ul>
         </div>
+        </div>
+      </section>
+
+      {/* Component 2 - Retention Features Tab */}
+      <section className="mb-16">
+        <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">Component 2 – Retention Features Tab</h2>
+        
+        {/* Problem Section */}
+        <div className="mb-12">
+          <h3 className="text-xl font-semibold mb-4 text-red-600 dark:text-red-400">Problem</h3>
+          <p className="mb-4">The original Retention → Features tab used cards to display retention settings. While visually simple, this design created several challenges:</p>
+          
+          <ul className="space-y-3">
+            <li>
+              <strong>Hard to scan:</strong> Users had to open and read each card individually to compare lists.
+            </li>
+            <li>
+              <strong>Limited space:</strong> Important details like "status" or "time left" were either hidden or not visible without extra clicks.
+            </li>
+            <li>
+              <strong>Not scalable:</strong> As more lists were added, the card layout became cluttered and inefficient for quick management.
+            </li>
+          </ul>
+
+          {/* Before Screenshot */}
+          <div className="my-8">
+            <img
+              src="/images/features-before.png"
+              alt="Before: Retention lists shown in separate cards, difficult to compare at scale"
+              className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+            />
+            <p className="text-sm text-center text-muted-foreground mt-2 italic">
+              Before — Retention lists shown in separate cards, difficult to compare at scale
+            </p>
+          </div>
+        </div>
+
+        {/* Solution Section */}
+        <div className="mb-12">
+          <h3 className="text-xl font-semibold mb-4 text-green-600 dark:text-green-400">Solution</h3>
+          <p className="mb-4">I redesigned the Features tab to use a table-based layout instead of cards, optimizing it for quick scanning and bulk management:</p>
+          
+          <ul className="space-y-3">
+            <li>
+              <strong>Converted cards into a single sortable table view.</strong>
+            </li>
+            <li>
+              <strong>Added clear columns</strong> for Date Created, Retention Duration, Time Left, Delete On, and Status.
+            </li>
+            <li>
+              <strong>Applied color-coded status labels</strong> (Active, Expiring Soon, Expired) for quick recognition.
+            </li>
+            <li>
+              <strong>Added filter controls</strong> (Retention Duration, Delete On, Status) for easier navigation in large datasets.
+            </li>
+            <li>
+              <strong>Preserved consistency</strong> with AvidBeam's overall UI style while making the design scalable.
+            </li>
+          </ul>
+
+          {/* After Screenshots */}
+          <div className="grid gap-8 my-8">
+            {/* Main Table View */}
+            <div>
+              <img
+                src="/images/features-after-table.png"
+                alt="After: Table view with sortable columns and color-coded statuses for quick scanning"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+              />
+              <p className="text-sm text-center text-muted-foreground mt-2 italic">
+                After — Table view with sortable columns and color-coded statuses for quick scanning
+              </p>
+            </div>
+
+            {/* Filter View */}
+            <div>
+              <img
+                src="/images/features-after-filters.png"
+                alt="After: Filters allow users to narrow down results for faster management"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+              />
+              <p className="text-sm text-center text-muted-foreground mt-2 italic">
+                After — Filters allow users to narrow down results for faster management
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Implementation Section */}
+        <div className="mb-12">
+          <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Implementation</h3>
+          <p className="mb-4">I delivered this redesign in Figma with:</p>
+          
+          <ul className="space-y-3">
+            <li>
+              <strong>Interaction notes</strong> for sorting, filtering, and color states.
+            </li>
+            <li>
+              <strong>Guidance on responsive table behavior</strong> for different breakpoints.
+            </li>
+            <li>
+              <strong>Collaboration with developers</strong> to align on feasibility and data handling in real-time.
+            </li>
+          </ul>
+        </div>
+
+        {/* Impact Section */}
+        <div className="mb-12">
+          <h3 className="text-xl font-semibold mb-4 text-purple-600 dark:text-purple-400">Impact (In Progress)</h3>
+          <p className="mb-4">Once implemented, this redesign is expected to:</p>
+          
+          <ul className="space-y-3">
+            <li>
+              <strong>Save time for admins</strong> by making retention lists scannable at a glance.
+            </li>
+            <li>
+              <strong>Improve accuracy</strong> by surfacing expiring/expired items clearly with status labels.
+            </li>
+            <li>
+              <strong>Scale better</strong> as more lists are added, avoiding the clutter of a card-based UI.
+            </li>
+          </ul>
+        </div>
+        </div>
       </section>
 
       {/* Process & Learnings */}
@@ -193,8 +319,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   // TypeScript now knows project exists and is not undefined
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <div className="mx-auto w-full max-w-12xl px-4">
+    <div className="fixed inset-0 overflow-auto bg-background">
+      <main className="flex flex-col min-h-[100dvh] space-y-10 py-12 sm:py-24">
+        <div className="mx-auto w-full max-w-4xl px-6">
         <Link 
           href="/#projects" 
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8"
@@ -272,7 +399,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             )}
           </div>
         )}
-      </div>
-    </main>
+        </div>
+      </main>
+    </div>
   );
 } 
