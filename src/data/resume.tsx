@@ -68,6 +68,47 @@ export const DATA = {
   education: [],
   projects: [
     {
+      title: "AvidBeam Component Redesign",
+      href: "#",
+      dates: "2024 - Present",
+      active: true,
+      slug: "avidbeam-redesign",
+      description:
+        "Led the comprehensive redesign of key components across AvidBeam's AI video analytics platform. Focused on improving user experience and visual consistency throughout the web application.",
+      technologies: [
+        "Figma",
+        "UI/UX Design",
+        "Component Systems",
+        "Prototyping",
+        "User Interface",
+        "Design Systems",
+      ],
+      links: [],
+      image: "/images/avidbeam-cover.png",
+      video: "",
+    },
+    {
+      title: "TrackMySci - Literature Tracking Platform",
+      href: "#",
+      dates: "2024 - 2025",
+      active: true,
+      slug: "trackmysci",
+      description:
+        "Designed and developed the frontend for a literature tracking platform, similar to StoryGraph but focused on scientific papers and research. Led the complete design process from user research to final implementation.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "CSS",
+        "Figma",
+        "UI/UX Design",
+        "Frontend Development",
+        "User Research",
+      ],
+      links: [],
+      image: "/images/trackmysci-cover.png",
+      video: "",
+    },
+    {
       title: "RabbitHole Chrome Extension",
       href: "https://github.com/alyab0uzaid/RabbitHole",
       dates: "March 2025",
