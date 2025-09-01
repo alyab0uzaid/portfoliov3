@@ -2,6 +2,7 @@ import { DATA } from "@/data/resume";
 import { Icons } from "@/components/icons";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 
 interface ProjectPageProps {
@@ -61,9 +62,11 @@ const AvidBeamCaseStudy = () => {
 
           {/* Before Screenshot */}
           <div className="my-8">
-            <img
+            <Image
               src="/images/roles-before.png"
               alt="Before: Multiple role panels with flat lists and no responsiveness"
+              width={800}
+              height={600}
               className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
             />
             <p className="text-sm text-center text-muted-foreground mt-2 italic">
@@ -97,11 +100,13 @@ const AvidBeamCaseStudy = () => {
 
           {/* After Screenshot */}
           <div className="my-8">
-            <img
-              src="/images/roles-after-desktop.png"
-              alt="After: Sidebar navigation, grouped permissions, search, consistent toggles"
-              className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
-            />
+                          <Image
+                src="/images/roles-after-desktop.png"
+                alt="After: Sidebar navigation, grouped permissions, search, consistent toggles"
+                width={800}
+                height={600}
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+              />
             <p className="text-sm text-center text-muted-foreground mt-2 italic">
               After — Sidebar navigation, grouped permissions, search, consistent toggles
             </p>
@@ -161,7 +166,7 @@ const AvidBeamCaseStudy = () => {
               <strong>Hard to scan:</strong> Users had to open and read each card individually to compare lists.
             </li>
             <li>
-              <strong>Limited space:</strong> Important details like "status" or "time left" were either hidden or not visible without extra clicks.
+              <strong>Limited space:</strong> Important details like &ldquo;status&rdquo; or &ldquo;time left&rdquo; were either hidden or not visible without extra clicks.
             </li>
             <li>
               <strong>Not scalable:</strong> As more lists were added, the card layout became cluttered and inefficient for quick management.
@@ -170,11 +175,13 @@ const AvidBeamCaseStudy = () => {
 
           {/* Before Screenshot */}
           <div className="my-8">
-            <img
-              src="/images/features-before.png"
-              alt="Before: Retention lists shown in separate cards, difficult to compare at scale"
-              className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
-            />
+                          <Image
+                src="/images/features-before.png"
+                alt="Before: Retention lists shown in separate cards, difficult to compare at scale"
+                width={800}
+                height={600}
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+              />
             <p className="text-sm text-center text-muted-foreground mt-2 italic">
               Before — Retention lists shown in separate cards, difficult to compare at scale
             </p>
@@ -200,7 +207,7 @@ const AvidBeamCaseStudy = () => {
               <strong>Added filter controls</strong> (Retention Duration, Delete On, Status) for easier navigation in large datasets.
             </li>
             <li>
-              <strong>Preserved consistency</strong> with AvidBeam's overall UI style while making the design scalable.
+              <strong>Preserved consistency</strong> with AvidBeam&rsquo;s overall UI style while making the design scalable.
             </li>
           </ul>
 
@@ -208,11 +215,13 @@ const AvidBeamCaseStudy = () => {
           <div className="grid gap-8 my-8">
             {/* Main Table View */}
             <div>
-              <img
-                src="/images/features-after-table.png"
-                alt="After: Table view with sortable columns and color-coded statuses for quick scanning"
-                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
-              />
+                              <Image
+                  src="/images/features-after-table.png"
+                  alt="After: Table view with sortable columns and color-coded statuses for quick scanning"
+                  width={800}
+                  height={600}
+                  className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+                />
               <p className="text-sm text-center text-muted-foreground mt-2 italic">
                 After — Table view with sortable columns and color-coded statuses for quick scanning
               </p>
@@ -220,11 +229,13 @@ const AvidBeamCaseStudy = () => {
 
             {/* Filter View */}
             <div>
-              <img
-                src="/images/features-after-filters.png"
-                alt="After: Filters allow users to narrow down results for faster management"
-                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
-              />
+                              <Image
+                  src="/images/features-after-filters.png"
+                  alt="After: Filters allow users to narrow down results for faster management"
+                  width={800}
+                  height={600}
+                  className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+                />
               <p className="text-sm text-center text-muted-foreground mt-2 italic">
                 After — Filters allow users to narrow down results for faster management
               </p>
@@ -297,9 +308,11 @@ const AvidBeamCaseStudy = () => {
 
             {/* Before Screenshot */}
             <div className="my-8">
-              <img
+              <Image
                 src="/images/disks-before.png"
                 alt="Before: Disk usage shown with dense text blocks and inconsistent threshold controls"
+                width={800}
+                height={600}
                 className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
               />
               <p className="text-sm text-center text-muted-foreground mt-2 italic">
@@ -333,9 +346,11 @@ const AvidBeamCaseStudy = () => {
 
             {/* After Screenshot */}
             <div className="my-8">
-              <img
+              <Image
                 src="/images/disks-after.png"
                 alt="After: Cleaner disk cards with consistent threshold controls, usage emphasized as primary visual"
+                width={800}
+                height={600}
                 className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
               />
               <p className="text-sm text-center text-muted-foreground mt-2 italic">
@@ -394,7 +409,7 @@ const AvidBeamCaseStudy = () => {
             
             <ul className="space-y-3">
               <li>
-                <strong>Unclear labeling:</strong> The purpose of the screen wasn't immediately obvious — "9605 records" was shown without context.
+                <strong>Unclear labeling:</strong> The purpose of the screen wasn&rsquo;t immediately obvious — &ldquo;9605 records&rdquo; was shown without context.
               </li>
               <li>
                 <strong>Weak hierarchy:</strong> Critical actions like deleting records were placed next to less important elements, making them easy to miss.
@@ -409,9 +424,11 @@ const AvidBeamCaseStudy = () => {
 
             {/* Before Screenshot */}
             <div className="my-8">
-              <img
+              <Image
                 src="/images/delete-before.png"
                 alt="Before: Minimal context, unclear labeling, and low visibility of destructive action"
+                width={800}
+                height={600}
                 className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
               />
               <p className="text-sm text-center text-muted-foreground mt-2 italic">
@@ -427,13 +444,13 @@ const AvidBeamCaseStudy = () => {
             
             <ul className="space-y-3">
               <li>
-                <strong>Added a clear title ("Delete Data")</strong> so users understand the screen's purpose.
+                <strong>Added a clear title (&ldquo;Delete Data&rdquo;)</strong> so users understand the screen&rsquo;s purpose.
               </li>
               <li>
-                <strong>Changed the record count</strong> to a more readable format: "9,605 records found".
+                <strong>Changed the record count</strong> to a more readable format: &ldquo;9,605 records found&rdquo;.
               </li>
               <li>
-                <strong>Introduced a dedicated red "Delete Records" button</strong> with clear labeling to signal destructive action.
+                <strong>Introduced a dedicated red &ldquo;Delete Records&rdquo; button</strong> with clear labeling to signal destructive action.
               </li>
               <li>
                 <strong>Reorganized layout:</strong> record count and refresh controls grouped together, date range inputs aligned consistently.
@@ -445,9 +462,11 @@ const AvidBeamCaseStudy = () => {
 
             {/* After Screenshot */}
             <div className="my-8">
-              <img
+              <Image
                 src="/images/delete-after.png"
                 alt="After: Clear title, readable record count, and dedicated red button for destructive action"
+                width={800}
+                height={600}
                 className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
               />
               <p className="text-sm text-center text-muted-foreground mt-2 italic">
@@ -576,9 +595,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         
         {/* @ts-ignore - TypeScript inference issue after null check */}
         {project.image && !project.video && (
-          <img
+          <Image
             src={project.image}
             alt={project.title}
+            width={800}
+            height={600}
             className="w-full rounded-lg mb-8"
           />
         )}
