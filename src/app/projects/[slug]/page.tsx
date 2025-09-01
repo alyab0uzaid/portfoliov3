@@ -36,8 +36,8 @@ const AvidBeamCaseStudy = () => {
 
       {/* Component 1 - Roles & Permissions */}
       <section className="mb-16">
-        <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
-          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">Component 1 – Roles & Permissions Management</h2>
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Component 1 – Roles & Permissions Management</h2>
         
         {/* Problem Section */}
         <div className="mb-12">
@@ -148,8 +148,8 @@ const AvidBeamCaseStudy = () => {
 
       {/* Component 2 - Retention Features Tab */}
       <section className="mb-16">
-        <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
-          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">Component 2 – Retention Features Tab</h2>
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Component 2 – Retention Features Tab</h2>
         
         {/* Problem Section */}
         <div className="mb-12">
@@ -267,6 +267,230 @@ const AvidBeamCaseStudy = () => {
             </li>
           </ul>
         </div>
+        </div>
+      </section>
+
+      {/* Component 3 - Disks Tab */}
+      <section className="mb-16">
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Component 3 – Disks Tab</h2>
+          
+          {/* Problem Section */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-red-600 dark:text-red-400">Problem</h3>
+            <p className="mb-4">The original Disks tab presented information in a way that was functional but difficult to parse at a glance:</p>
+            
+            <ul className="space-y-3">
+              <li>
+                <strong>Crowded layout:</strong> Each disk card contained multiple text labels (used memory, total memory, mount path) without strong hierarchy.
+              </li>
+              <li>
+                <strong>Threshold controls:</strong> Threshold percentage inputs and toggles were placed inconsistently, making them harder to use quickly.
+              </li>
+              <li>
+                <strong>Limited readability:</strong> The design emphasized raw numbers rather than usage percentage, slowing down decision-making.
+              </li>
+              <li>
+                <strong>Scalability issues:</strong> As more disks were added, the visual density became harder to manage.
+              </li>
+            </ul>
+
+            {/* Before Screenshot */}
+            <div className="my-8">
+              <img
+                src="/images/disks-before.png"
+                alt="Before: Disk usage shown with dense text blocks and inconsistent threshold controls"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+              />
+              <p className="text-sm text-center text-muted-foreground mt-2 italic">
+                Before — Disk usage shown with dense text blocks and inconsistent threshold controls
+              </p>
+            </div>
+          </div>
+
+          {/* Solution Section */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-green-600 dark:text-green-400">Solution</h3>
+            <p className="mb-4">I simplified the design and emphasized clarity for system admins:</p>
+            
+            <ul className="space-y-3">
+              <li>
+                <strong>Created a cleaner card layout</strong> with consistent formatting for each disk.
+              </li>
+              <li>
+                <strong>Highlighted usage percentage and progress bars</strong> as the primary visual indicators.
+              </li>
+              <li>
+                <strong>Standardized threshold controls</strong> across all disks for predictability.
+              </li>
+              <li>
+                <strong>Added a Retain Data toggle</strong> directly in each card to streamline decision-making.
+              </li>
+              <li>
+                <strong>Improved spacing and visual hierarchy,</strong> so the most critical information (usage % and status) stands out immediately.
+              </li>
+            </ul>
+
+            {/* After Screenshot */}
+            <div className="my-8">
+              <img
+                src="/images/disks-after.png"
+                alt="After: Cleaner disk cards with consistent threshold controls, usage emphasized as primary visual"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+              />
+              <p className="text-sm text-center text-muted-foreground mt-2 italic">
+                After — Cleaner disk cards with consistent threshold controls, usage emphasized as primary visual
+              </p>
+            </div>
+          </div>
+
+          {/* Implementation Section */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Implementation</h3>
+            <p className="mb-4">I handed off the redesign with:</p>
+            
+            <ul className="space-y-3">
+              <li>
+                <strong>Updated Figma components</strong> for disk cards.
+              </li>
+              <li>
+                <strong>Documentation on usage bar scaling,</strong> toggle states, and responsive behavior.
+              </li>
+              <li>
+                <strong>Developer collaboration</strong> to ensure accurate reflection of live system values in the UI.
+              </li>
+            </ul>
+          </div>
+
+          {/* Impact Section */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-purple-600 dark:text-purple-400">Impact (In Progress)</h3>
+            <p className="mb-4">When implemented, this redesign is expected to:</p>
+            
+            <ul className="space-y-3">
+              <li>
+                <strong>Reduce cognitive load</strong> by making usage % instantly visible.
+              </li>
+              <li>
+                <strong>Improve usability</strong> through consistent control placement.
+              </li>
+              <li>
+                <strong>Scale more effectively</strong> as multiple disks are added without overwhelming the interface.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Component 4 - Delete Data */}
+      <section className="mb-16">
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Component 4 – Delete Data</h2>
+          
+          {/* Problem Section */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-red-600 dark:text-red-400">Problem</h3>
+            <p className="mb-4">The original Delete Data screen had several UX issues:</p>
+            
+            <ul className="space-y-3">
+              <li>
+                <strong>Unclear labeling:</strong> The purpose of the screen wasn't immediately obvious — "9605 records" was shown without context.
+              </li>
+              <li>
+                <strong>Weak hierarchy:</strong> Critical actions like deleting records were placed next to less important elements, making them easy to miss.
+              </li>
+              <li>
+                <strong>Low affordance:</strong> The delete action was represented by a small trash icon, which did not communicate the severity of the action.
+              </li>
+              <li>
+                <strong>Crowded layout:</strong> Key elements (record count, refresh, date pickers, and delete action) lacked spacing and separation.
+              </li>
+            </ul>
+
+            {/* Before Screenshot */}
+            <div className="my-8">
+              <img
+                src="/images/delete-before.png"
+                alt="Before: Minimal context, unclear labeling, and low visibility of destructive action"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+              />
+              <p className="text-sm text-center text-muted-foreground mt-2 italic">
+                Before — Minimal context, unclear labeling, and low visibility of destructive action
+              </p>
+            </div>
+          </div>
+
+          {/* Solution Section */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-green-600 dark:text-green-400">Solution</h3>
+            <p className="mb-4">I redesigned the screen to make destructive actions clear, intentional, and safe:</p>
+            
+            <ul className="space-y-3">
+              <li>
+                <strong>Added a clear title ("Delete Data")</strong> so users understand the screen's purpose.
+              </li>
+              <li>
+                <strong>Changed the record count</strong> to a more readable format: "9,605 records found".
+              </li>
+              <li>
+                <strong>Introduced a dedicated red "Delete Records" button</strong> with clear labeling to signal destructive action.
+              </li>
+              <li>
+                <strong>Reorganized layout:</strong> record count and refresh controls grouped together, date range inputs aligned consistently.
+              </li>
+              <li>
+                <strong>Improved spacing and alignment</strong> to make the flow easier to follow.
+              </li>
+            </ul>
+
+            {/* After Screenshot */}
+            <div className="my-8">
+              <img
+                src="/images/delete-after.png"
+                alt="After: Clear title, readable record count, and dedicated red button for destructive action"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
+              />
+              <p className="text-sm text-center text-muted-foreground mt-2 italic">
+                After — Clear title, readable record count, and dedicated red button for destructive action
+              </p>
+            </div>
+          </div>
+
+          {/* Implementation Section */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Implementation</h3>
+            <p className="mb-4">I provided developers with:</p>
+            
+            <ul className="space-y-3">
+              <li>
+                <strong>Figma documentation</strong> outlining button states (default, hover, confirmation).
+              </li>
+              <li>
+                <strong>Notes on confirmation flows</strong> to prevent accidental deletions.
+              </li>
+              <li>
+                <strong>Layout spacing rules</strong> to maintain consistency with the rest of the AvidBeam UI.
+              </li>
+            </ul>
+          </div>
+
+          {/* Impact Section */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-purple-600 dark:text-purple-400">Impact (In Progress)</h3>
+            <p className="mb-4">Once implemented, this redesign will:</p>
+            
+            <ul className="space-y-3">
+              <li>
+                <strong>Reduce user error</strong> by making the destructive action highly visible and intentional.
+              </li>
+              <li>
+                <strong>Improve clarity</strong> with better labeling and hierarchy.
+              </li>
+              <li>
+                <strong>Increase confidence</strong> by aligning the design with common UX conventions for data deletion.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
