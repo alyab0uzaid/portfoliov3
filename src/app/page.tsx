@@ -3,7 +3,9 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
+import { Download } from "lucide-react";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -44,6 +46,14 @@ export default function Page() {
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+          <Button asChild size="lg" className="gap-2 rounded-full mt-4">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Download className="h-4 w-4" />
+              Download Resume
+            </a>
+          </Button>
         </BlurFade>
       </section>
       <section id="skills">
