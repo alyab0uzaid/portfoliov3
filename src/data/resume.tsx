@@ -96,7 +96,7 @@ export const DATA = {
       description:
         "Designed and developed the frontend for a literature tracking platform, similar to StoryGraph but focused on scientific papers and research. Led the complete design process from user research to final implementation.",
       technologies: [
-        "React",
+        "SvelteKit",
         "JavaScript",
         "CSS",
         "Figma",

@@ -544,6 +544,105 @@ const AvidBeamCaseStudy = () => {
   );
 };
 
+// TrackMySci Case Study Component
+const TrackMySciCaseStudy = () => {
+  return (
+    <div className="prose dark:prose-invert prose-lg max-w-none">
+      {/* Project Overview */}
+      <div className="mb-12">
+        <p className="text-lg mb-6">
+          TrackMySci is a literature tracking platform designed specifically for researchers and academics. 
+          Think StoryGraph, but for scientific papers and research literature. I led the complete design and 
+          frontend development process, from initial user research through final implementation.
+        </p>
+      </div>
+
+      {/* Demo Video Section */}
+      <section className="mb-16">
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Platform Walkthrough</h2>
+          
+          <div className="mb-8">
+            <p className="mb-6">
+              This demo video shows the core functionality of TrackMySci, walking through how researchers can 
+              track, organize, and manage their scientific literature. The interface focuses on usability and 
+              efficient workflow for academic research.
+            </p>
+            
+            {/* YouTube Embed */}
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/TqopIPtt6zs"
+                title="TrackMySci Platform Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features Section */}
+      <section className="mb-16">
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Key Features & Design Decisions</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-blue-400">User-Centered Design</h3>
+              <ul className="space-y-2">
+                <li><strong>Research-focused interface</strong> tailored for academic workflows</li>
+                <li><strong>Intuitive organization</strong> of papers and research materials</li>
+                <li><strong>Clean, distraction-free</strong> reading and tracking experience</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-green-600 dark:text-green-400">Technical Implementation</h3>
+              <ul className="space-y-2">
+                <li><strong>SvelteKit framework</strong> for optimal performance and developer experience</li>
+                <li><strong>Responsive design</strong> for desktop and mobile access</li>
+                <li><strong>Modern CSS</strong> for clean, professional aesthetics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Design Process Section */}
+      <section className="mb-16">
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Design Process</h2>
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-purple-600 dark:text-purple-400">1. User Research</h3>
+              <p>Conducted interviews with researchers and academics to understand their literature tracking pain points and workflow needs.</p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-purple-600 dark:text-purple-400">2. Information Architecture</h3>
+              <p>Designed the structure and navigation flow to support efficient research literature management and discovery.</p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-purple-600 dark:text-purple-400">3. Prototyping & Testing</h3>
+              <p>Created interactive prototypes in Figma and conducted usability testing with target users to refine the interface.</p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-purple-600 dark:text-purple-400">4. Frontend Development</h3>
+              <p>Implemented the final design using SvelteKit, ensuring responsive behavior and smooth user interactions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export async function generateStaticParams() {
   return DATA.projects.map((project) => ({
     slug: project.slug,
@@ -557,8 +656,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  // Check if this is the AvidBeam project for special case study treatment
+  // Check if this is the AvidBeam or TrackMySci project for special case study treatment
   const isAvidBeam = project.slug === "avidbeam-redesign";
+  const isTrackMySci = project.slug === "trackmysci";
 
   // TypeScript now knows project exists and is not undefined
   return (
@@ -604,9 +704,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           />
         )}
 
-        {/* Render AvidBeam case study or basic content */}
+        {/* Render specialized case studies or basic content */}
         {isAvidBeam ? (
           <AvidBeamCaseStudy />
+        ) : isTrackMySci ? (
+          <TrackMySciCaseStudy />
         ) : (
           <div className="prose dark:prose-invert max-w-none">
             <p>{project.description}</p>
