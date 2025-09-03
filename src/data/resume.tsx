@@ -132,7 +132,7 @@ export const DATA = {
         },
       ],
       image: "/images/rabbitholecover.png",
-      video: "https://www.youtube.com/embed/obKfD5tFFy0",
+      video: "",
     },
     {
       title: "PrepGuide.org",

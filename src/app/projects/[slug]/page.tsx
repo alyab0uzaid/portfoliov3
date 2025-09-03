@@ -643,6 +643,105 @@ const TrackMySciCaseStudy = () => {
   );
 };
 
+// RabbitHole Case Study Component
+const RabbitHoleCaseStudy = () => {
+  return (
+    <div className="prose dark:prose-invert prose-lg max-w-none">
+      {/* Project Overview */}
+      <div className="mb-12">
+        <p className="text-lg mb-6">
+          RabbitHole is a Chrome extension that transforms how you explore and discover information online. 
+          It integrates Wikipedia content directly into your browsing experience and visualizes your 
+          exploration journey, helping you see the connections between the topics you discover.
+        </p>
+      </div>
+
+      {/* Demo Video Section */}
+      <section className="mb-16">
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Extension Demo</h2>
+          
+          <div className="mb-8">
+            <p className="mb-6">
+              This demo shows RabbitHole in action - how it seamlessly integrates Wikipedia content 
+              into your browsing experience and visualizes your exploration journey as you discover 
+              new topics and make connections.
+            </p>
+            
+            {/* YouTube Embed */}
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/obKfD5tFFy0"
+                title="RabbitHole Chrome Extension Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features Section */}
+      <section className="mb-16">
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Key Features</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-blue-400">Wikipedia Integration</h3>
+              <ul className="space-y-2">
+                <li><strong>Seamless content overlay</strong> on any webpage</li>
+                <li><strong>Smart topic detection</strong> and relevant article suggestions</li>
+                <li><strong>Non-intrusive design</strong> that enhances browsing</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-green-600 dark:text-green-400">Journey Visualization</h3>
+              <ul className="space-y-2">
+                <li><strong>Interactive exploration map</strong> using GoJS</li>
+                <li><strong>Visual connections</strong> between discovered topics</li>
+                <li><strong>Personal knowledge graph</strong> of your browsing journey</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Implementation Section */}
+      <section className="mb-16">
+        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
+          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Technical Implementation</h2>
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-purple-600 dark:text-purple-400">Chrome Extension Architecture</h3>
+              <p>Built using modern Chrome Extension APIs with content scripts and background workers for seamless integration.</p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-purple-600 dark:text-purple-400">Wikipedia API Integration</h3>
+              <p>Leverages Wikipedia&rsquo;s REST API to fetch relevant content and maintain real-time synchronization with articles.</p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-purple-600 dark:text-purple-400">Interactive Visualization</h3>
+              <p>Uses GoJS library to create dynamic, interactive diagrams that map your exploration journey and topic connections.</p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-purple-600 dark:text-purple-400">Performance Optimization</h3>
+              <p>Optimized for minimal performance impact on browsing experience with efficient caching and lazy loading.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export async function generateStaticParams() {
   return DATA.projects.map((project) => ({
     slug: project.slug,
@@ -656,9 +755,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  // Check if this is the AvidBeam or TrackMySci project for special case study treatment
+  // Check if this is a project with special case study treatment
   const isAvidBeam = project.slug === "avidbeam-redesign";
   const isTrackMySci = project.slug === "trackmysci";
+  const isRabbitHole = project.slug === "rabbithole";
 
   // TypeScript now knows project exists and is not undefined
   return (
@@ -709,6 +809,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <AvidBeamCaseStudy />
         ) : isTrackMySci ? (
           <TrackMySciCaseStudy />
+        ) : isRabbitHole ? (
+          <RabbitHoleCaseStudy />
         ) : (
           <div className="prose dark:prose-invert max-w-none">
             <p>{project.description}</p>
