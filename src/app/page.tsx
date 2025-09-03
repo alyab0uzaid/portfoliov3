@@ -49,7 +49,7 @@ export default function Page() {
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
           <Button asChild size="lg" className="gap-2 rounded-full mt-4">
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Aly_Abou-Zaid_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Download className="h-4 w-4" />
               Download Resume
             </a>

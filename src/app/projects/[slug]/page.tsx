@@ -559,8 +559,7 @@ const TrackMySciCaseStudy = () => {
 
       {/* Demo Video Section */}
       <section className="mb-16">
-        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
-          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Platform Walkthrough</h2>
+        <h2 className="text-2xl font-bold mb-8">Platform Walkthrough</h2>
           
           <div className="mb-8">
             <p className="mb-6">
@@ -570,24 +569,21 @@ const TrackMySciCaseStudy = () => {
             </p>
             
             {/* YouTube Embed */}
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+            <div className="relative w-full aspect-video">
               <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                className="absolute inset-0 w-full h-full rounded-lg"
                 src="https://www.youtube.com/embed/TqopIPtt6zs"
                 title="TrackMySci Platform Demo"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>
           </div>
-        </div>
       </section>
 
       {/* Key Features Section */}
       <section className="mb-16">
-        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
-          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Key Features & Design Decisions</h2>
+        <h2 className="text-2xl font-bold mb-8">Key Features & Design Decisions</h2>
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
@@ -608,13 +604,11 @@ const TrackMySciCaseStudy = () => {
               </ul>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Design Process Section */}
       <section className="mb-16">
-        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
-          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Design Process</h2>
+        <h2 className="text-2xl font-bold mb-8">Design Process</h2>
           
           <div className="space-y-6">
             <div>
@@ -637,7 +631,6 @@ const TrackMySciCaseStudy = () => {
               <p>Implemented the final design using SvelteKit, ensuring responsive behavior and smooth user interactions.</p>
             </div>
           </div>
-        </div>
       </section>
     </div>
   );
@@ -658,8 +651,7 @@ const RabbitHoleCaseStudy = () => {
 
       {/* Demo Video Section */}
       <section className="mb-16">
-        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
-          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Extension Demo</h2>
+        <h2 className="text-2xl font-bold mb-8">Extension Demo</h2>
           
           <div className="mb-8">
             <p className="mb-6">
@@ -669,24 +661,21 @@ const RabbitHoleCaseStudy = () => {
             </p>
             
             {/* YouTube Embed */}
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+            <div className="relative w-full aspect-video">
               <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                className="absolute inset-0 w-full h-full rounded-lg"
                 src="https://www.youtube.com/embed/obKfD5tFFy0"
                 title="RabbitHole Chrome Extension Demo"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>
           </div>
-        </div>
       </section>
 
       {/* Key Features Section */}
       <section className="mb-16">
-        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
-          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Key Features</h2>
+        <h2 className="text-2xl font-bold mb-8">Key Features</h2>
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
@@ -707,13 +696,11 @@ const RabbitHoleCaseStudy = () => {
               </ul>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Technical Implementation Section */}
       <section className="mb-16">
-        <div className="bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-600 p-8">
-          <h2 className="text-2xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-600 pb-4">Technical Implementation</h2>
+        <h2 className="text-2xl font-bold mb-8">Technical Implementation</h2>
           
           <div className="space-y-6">
             <div>
@@ -736,7 +723,6 @@ const RabbitHoleCaseStudy = () => {
               <p>Optimized for minimal performance impact on browsing experience with efficient caching and lazy loading.</p>
             </div>
           </div>
-        </div>
       </section>
     </div>
   );
